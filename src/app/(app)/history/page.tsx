@@ -247,7 +247,7 @@ export default function HistoryPage() {
                   {h.status && (
                     <Badge
                       variant="outline"
-                      className={`${STATUS_COLORS[h.status] ?? ""} shrink-0 text-xs`}
+                      className={`${(STATUS_COLORS as Record<string, string>)[h.status!] ?? ""} shrink-0 text-xs`}
                     >
                       {h.status}
                     </Badge>
