@@ -140,7 +140,7 @@ export default function TransferDetailPage() {
             </div>
             <Badge
               variant="outline"
-              className={STATUS_COLORS[transfer.status as keyof typeof STATUS_COLORS] ?? ""}
+              className={STATUS_COLORS[transfer.status as string]}
             >
               {transfer.status}
             </Badge>

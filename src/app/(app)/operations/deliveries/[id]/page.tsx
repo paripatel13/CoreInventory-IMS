@@ -57,7 +57,7 @@ export default function DeliveryDetailPage() {
               <p className="text-xs text-slate-400 uppercase tracking-wide">Customer</p>
               <p className="text-lg font-semibold text-slate-900 mt-0.5">{delivery.customer}</p>
             </div>
-            <Badge variant="outline" className={STATUS_COLORS[delivery.status]}>{delivery.status}</Badge>
+            <Badge variant="outline" className={STATUS_COLORS[delivery.status as string]}>{delivery.status}</Badge>
           </div>
           <div className="border border-slate-100 rounded-lg overflow-hidden">
             <table className="w-full text-sm">

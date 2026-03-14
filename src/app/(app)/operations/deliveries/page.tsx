@@ -95,7 +95,7 @@ export default function DeliveriesPage() {
                       <td className="px-5 py-3.5 text-slate-500 dark:text-slate-400">{d.items.length} item(s)</td>
                       <td className="px-5 py-3.5 text-slate-500 dark:text-slate-400">{warehouses.find((w) => w.id === d.warehouseId)?.name ?? d.warehouseId}</td>
                       <td className="px-5 py-3.5">
-                        <Badge variant="outline" className={STATUS_COLORS[d.status] ?? ""}>{d.status}</Badge>
+                        <Badge variant="outline" className={STATUS_COLORS[d.status as string] ?? ""}>{d.status}</Badge>
                       </td>
                       <td className="px-5 py-3.5 text-slate-400 text-xs">{formatDate(safeDate(d.createdAt))}</td>
                       <td className="px-5 py-3.5 text-right">

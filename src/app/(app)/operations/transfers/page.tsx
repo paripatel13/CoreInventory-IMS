@@ -98,7 +98,7 @@ const filtered = transfers.filter((t) => {
                       <td className="px-5 py-3.5 text-slate-500 dark:text-slate-400">{t.toWarehouseName ?? t.toLocation}</td>
                       <td className="px-5 py-3.5 text-slate-500 dark:text-slate-400">{t.items.length} item(s)</td>
                       <td className="px-5 py-3.5">
-                        <Badge variant="outline" className={STATUS_COLORS[t.status] ?? ""}>{t.status}</Badge>
+                        <Badge variant="outline" className={STATUS_COLORS[t.status as string] ?? ""}>{t.status}</Badge>
                       </td>
                       <td className="px-5 py-3.5 text-slate-400 text-xs">{formatDate(safeDate(t.createdAt))}</td>
                       <td className="px-5 py-3.5 text-right">

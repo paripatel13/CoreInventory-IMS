@@ -443,7 +443,7 @@ export default function DashboardPage() {
                   {a.status && (
                     <Badge
                       variant="outline"
-                      className={`${STATUS_COLORS[a.status as keyof typeof STATUS_COLORS] ?? ""} shrink-0 text-xs`}
+                      className={`${STATUS_COLORS[a.status as string] ?? ""} shrink-0 text-xs`}
                     >
                       {a.status}
                     </Badge>

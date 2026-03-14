@@ -245,13 +245,13 @@ export default function HistoryPage() {
 
                   {/* Status */}
                   {h.status && (
-                    <Badge
-                      variant="outline"
-                      className={`${(STATUS_COLORS as Record<string, string>)[h.status!] ?? ""} shrink-0 text-xs`}
-                    >
-                      {h.status}
-                    </Badge>
-                  )}
+  <Badge
+    variant="outline"
+    className={`${STATUS_COLORS[h.status as string] ?? ""} shrink-0 text-xs`}
+  >
+    {h.status}
+  </Badge>
+)}
 
                   {/* Date */}
                   <span className="text-xs text-slate-400 shrink-0 hidden sm:block">

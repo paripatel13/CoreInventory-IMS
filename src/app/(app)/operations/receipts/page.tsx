@@ -95,7 +95,7 @@ export default function ReceiptsPage() {
                       <td className="px-5 py-3.5 text-slate-500 dark:text-slate-400">{r.items.length} item(s)</td>
                       <td className="px-5 py-3.5 text-slate-500 dark:text-slate-400">{warehouses.find((w) => w.id === r.warehouseId)?.name ?? r.warehouseId}</td>
                       <td className="px-5 py-3.5">
-                        <Badge variant="outline" className={STATUS_COLORS[r.status] ?? ""}>{r.status}</Badge>
+                        <Badge variant="outline" className={STATUS_COLORS[r.status as string] ?? ""}>{r.status}</Badge>
                       </td>
                       <td className="px-5 py-3.5 text-slate-400 text-xs">{formatDate(safeDate(r.createdAt))}</td>
                       <td className="px-5 py-3.5 text-right">
